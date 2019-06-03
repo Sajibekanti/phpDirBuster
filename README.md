@@ -1,4 +1,5 @@
 phpDirBuster requires composer.
 
-For installation: 
-composer require mattiablx/phpDirBuster
+For installation:
+
+<code>composer require mattiablx/phpDirBuster</code>
