@@ -6,6 +6,6 @@
     "autoload": {
         "psr-0": {
             "MattiaBLX\\phpDirBuster\\": "src/"
-        },
+        }
     }
 }
