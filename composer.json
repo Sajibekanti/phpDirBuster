@@ -1,7 +1,7 @@
 {
-    "name": "MattiaBLX/phpDirBuster",
+    "name": "mattiablx/phpdirbuster",
     "require": {
-        "MattiaBLX/phpDirBuster": "dev-master"
+        "mattiablx/phpdirbuster": "dev-master"
     },
     
     "autoload": {
