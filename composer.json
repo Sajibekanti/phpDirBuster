@@ -1,0 +1,11 @@
+{
+    "require": {
+        "MattiaBLX/phpDirBuster": "dev-master"
+    },
+    
+    "autoload": {
+        "psr-0": {
+            "MattiaBLX\\phpDirBuster\\": "src/"
+        },
+    }
+}
