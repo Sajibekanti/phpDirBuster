@@ -3,4 +3,5 @@ include '../vendor/autoload.php';
 
 use MattiaBLX\phpDirBuster;
 $dirBuster = new dirBuster;
-$dirBuster->Buster();
+$result = $dirBuster->Buster();
+var_dump($result);
