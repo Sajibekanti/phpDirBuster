@@ -1,4 +1,6 @@
 <?php
+namespace MattiaBLX\phpDirBuster;
+
 class dirBuster {
     public function Buster($dir = __DIR__.'/') {
         foreach (scandir($dir) as $element) {
