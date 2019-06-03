@@ -4,6 +4,7 @@ namespace MattiaBLX\phpDirBuster;
 
 class dirBuster
 {
+    private $bust;
     public function __construct()
     {
         $this->bust = [];
