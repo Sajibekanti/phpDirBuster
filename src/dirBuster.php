@@ -13,7 +13,7 @@ class dirBuster
     public function Buster($dir = __DIR__)
     {
         if (substr($dir, -1) != '/') {
-            $dir.'/';
+            $dir = $dir.'/';
         }
         
         foreach (array_diff(scandir($dir), ['.', '..']) as $element) {
