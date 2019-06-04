@@ -12,7 +12,7 @@ class dirBuster
 
     public function Buster($dir = __DIR__)
     {
-        if(substr($dir, -1) != '/') $dir.'/';
+        if(substr($dir, -1) != '/') $dir = $dir.'/';
         foreach (array_diff(scandir($dir), ['.', '..']) as $element) {
             $finaldir = $dir.$element;
             if (is_dir($finaldir)) {
