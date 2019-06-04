@@ -10,19 +10,18 @@ class dirBuster
         $this->bust = [];
     }
 
-    public function Buster($dir = __DIR__.'/')
+    public function Buster($dir = __DIR__)
     {
-        foreach (scandir($dir) as $element) {
+        if(substr($dir, -1) != '/') $dir.'/';
+        foreach (array_diff(scandir($dir), ['.', '..']) as $element) {
             $finaldir = $dir.$element;
-            if (!in_array($element, ['.', '..'])) {
-                if (is_dir($finaldir)) {
-                    $this->bust['directories'][] = $finaldir;
-                    $this->Buster($finaldir.'/');
-                } else {
-                    $this->bust['files'][] = $finaldir;
-                }
-                $this->bust['total'][] = $finaldir;
+            if (is_dir($finaldir)) {
+                $this->bust['directories'][] = $finaldir;
+                $this->Buster($finaldir);
+            } else {
+                $this->bust['files'][] = $finaldir;
             }
+            $this->bust['total'][] = $finaldir;
         }
 
         return $this->bust;
