@@ -9,12 +9,6 @@ class dirBuster
     {
         $this->bust = [];
     }
-
-    public function Buster($dir = __DIR__)
-    {
-        //backwards compatibility, this function will be removed in the future in favor of the camelCase.
-        return $this->buster($dir);
-    }
     
     public function buster($dir = __DIR__)
     {
