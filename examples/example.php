@@ -3,5 +3,5 @@
 include '../vendor/autoload.php';
 
 $dirBuster = new dirBuster();
-$result = $dirBuster->Buster();
+$result = $dirBuster->buster();
 var_dump($result);
