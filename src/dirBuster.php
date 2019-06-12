@@ -12,6 +12,12 @@ class dirBuster
 
     public function Buster($dir = __DIR__)
     {
+        //backwards compatibility, this function will be removed in the future in favor of the camelCase.
+        return $this->buster($dir);
+    }
+    
+    public function buster($dir = __DIR__)
+    {
         if (substr($dir, -1) != '/') {
             $dir = $dir.'/';
         }
@@ -20,7 +26,7 @@ class dirBuster
             $finaldir = $dir.$element;
             if (is_dir($finaldir)) {
                 $this->bust['directories'][] = $finaldir;
-                $this->Buster($finaldir);
+                $this->buster($finaldir);
             } else {
                 $this->bust['files'][] = $finaldir;
             }
